@@ -1,0 +1,29 @@
+.bold {
+    font-weight: bold;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.success {
+    font-style: italic;
+    color: #0f9d58;
+}
+
+.error {
+    font-weight: bold;
+    color: darkred;
+}
+
+h3 {
+    text-transform: capitalize;
+}
+
+form textarea {
+    min-height: 100px !important;
+}

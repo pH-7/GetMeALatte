@@ -1,0 +1,13 @@
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # NOTE: We have to rewrite the showitem URL first, before rewriting all requesting below.
+    # Otherwise, this one won't have any effect.
+    RewriteRule ^p/([a-z0-9\.\-_]+)$ index.php?uri=showitem&id=$1 [QSA,L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.+)$ index.php?uri=$1 [QSA,L]
+</IfModule>

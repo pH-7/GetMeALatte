@@ -1,0 +1,29 @@
+{
+    "name": "pierrehenry/buy-me-acoffee-clone",
+    "authors": [
+        {
+            "name": "Pierre-Henry Soria",
+            "email": "pierre@pierrehenry.be"
+        }
+    ],
+    "require": {
+        "php": ">= 8.0",
+        "symfony/dotenv": "^6.0",
+        "symfony/mailer": "^6.0",
+        "ph-7/materialize-css": "^1.0",
+        "symfony/templating": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "BuyMeACoffeeClone\\": "src"
+        },
+        "files": ["src/helpers.php"]
+    },
+    "scripts": {
+        "post-cmd": [
+            "cp -Rf vendor/ph-7/materialize-css/dist/* assets/materialize"
+        ],
+        "post-install-cmd": ["@post-cmd"],
+        "post-update-cmd": ["@post-cmd"]
+    }
+}
