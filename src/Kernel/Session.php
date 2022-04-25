@@ -10,9 +10,11 @@ namespace GetMeALatteLike\Kernel;
 
 class Session
 {
-    public function __construct()
+    public function __construct(bool $autoSessionStart = true)
     {
-        $this->initialize();
+        if ($autoSessionStart) {
+            $this->initialize();
+        }
     }
 
     public function set(string $key, $value): void
