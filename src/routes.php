@@ -1,10 +1,10 @@
 <?php
-namespace BuyMeACoffeeClone;
+namespace GetMeALatteLike;
 
-use BuyMeACoffeeClone\Kernel\Http\Router;
-use BuyMeACoffeeClone\Kernel\PhpTemplate\ViewNotFound;
-use BuyMeACoffeeClone\Kernel\Session;
-use BuyMeACoffeeClone\Service\UserSession as UserSessionService;
+use GetMeALatteLike\Kernel\Http\Router;
+use GetMeALatteLike\Kernel\PhpTemplate\ViewNotFound;
+use GetMeALatteLike\Kernel\Session;
+use GetMeALatteLike\Service\UserSession as UserSessionService;
 use Exception;
 
 $userSession = new UserSessionService(new Session());

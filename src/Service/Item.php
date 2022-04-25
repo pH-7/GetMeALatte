@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace BuyMeACoffeeClone\Service;
+namespace GetMeALatteLike\Service;
 
-use BuyMeACoffeeClone\Model\Item as ItemModel;
+use GetMeALatteLike\Model\Item as ItemModel;
 
 class Item
 {

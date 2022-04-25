@@ -1,8 +1,8 @@
 <?php
 
-namespace BuyMeACoffeeClone\Service;
+namespace GetMeALatteLike\Service;
 
-use BuyMeACoffeeClone\Model\Payment as PaymentModel;
+use GetMeALatteLike\Model\Payment as PaymentModel;
 use stdClass;
 
 class Payment

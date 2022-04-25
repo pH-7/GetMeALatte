@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
 
-use BuyMeACoffeeClone\Kernel\Bootstrap;
+use GetMeALatteLike\Kernel\Bootstrap;
 
 ob_start();
 $app = new Bootstrap();

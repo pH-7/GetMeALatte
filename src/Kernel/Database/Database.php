@@ -1,6 +1,6 @@
 <?php
 
-namespace BuyMeACoffeeClone\Kernel\Database;
+namespace GetMeALatteLike\Kernel\Database;
 
 use PDO;
 use PDOException;

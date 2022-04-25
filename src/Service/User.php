@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace BuyMeACoffeeClone\Service;
+namespace GetMeALatteLike\Service;
 
-use BuyMeACoffeeClone\Model\User as UserModel;
+use GetMeALatteLike\Model\User as UserModel;
 
 class User
 {

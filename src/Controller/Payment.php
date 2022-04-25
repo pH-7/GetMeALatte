@@ -2,16 +2,14 @@
 
 declare(strict_types=1);
 
-namespace BuyMeACoffeeClone\Controller;
+namespace GetMeALatteLike\Controller;
 
-use BuyMeACoffeeClone\Kernel\Input;
-use BuyMeACoffeeClone\Kernel\PhpTemplate\View;
-use BuyMeACoffeeClone\Kernel\Session;
-use BuyMeACoffeeClone\Service\Item as ItemService;
-use BuyMeACoffeeClone\Service\Payment as PaymentService;
-use BuyMeACoffeeClone\Service\User as UserService;
-use BuyMeACoffeeClone\Service\UserSession as UserSessionService;
-use BuyMeACoffeeClone\Service\UserValidation;
+use GetMeALatteLike\Kernel\Input;
+use GetMeALatteLike\Kernel\PhpTemplate\View;
+use GetMeALatteLike\Service\Item as ItemService;
+use GetMeALatteLike\Service\Payment as PaymentService;
+use GetMeALatteLike\Service\User as UserService;
+use GetMeALatteLike\Service\UserValidation;
 use stdClass;
 
 class Payment extends Base

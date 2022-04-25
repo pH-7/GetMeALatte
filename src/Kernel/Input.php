@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace BuyMeACoffeeClone\Kernel;
+namespace GetMeALatteLike\Kernel;
 
 final class Input
 {

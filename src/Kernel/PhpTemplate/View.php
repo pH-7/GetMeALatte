@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace BuyMeACoffeeClone\Kernel\PhpTemplate;
+namespace GetMeALatteLike\Kernel\PhpTemplate;
 
 use Symfony\Component\Templating\Helper\SlotsHelper;
 use Symfony\Component\Templating\Loader\FilesystemLoader;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace BuyMeACoffeeClone\Service;
+namespace GetMeALatteLike\Service;
 
 class UserValidation
 {

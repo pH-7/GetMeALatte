@@ -2,14 +2,19 @@
 
 declare(strict_types=1);
 
-namespace BuyMeACoffeeClone\Controller;
+namespace GetMeALatteLike\Controller;
 
-use BuyMeACoffeeClone\Kernel\Input;
-use BuyMeACoffeeClone\Kernel\PhpTemplate\View;
-use BuyMeACoffeeClone\Kernel\Session;
-use BuyMeACoffeeClone\Service\User as UserService;
-use BuyMeACoffeeClone\Service\UserSession as UserSessionService;
-use BuyMeACoffeeClone\Service\UserValidation;
+use GetMeALatteLike\Kernel\Input;
+use GetMeALatteLike\Kernel\PhpTemplate\View;
+use GetMeALatteLike\Kernel\Session;
+use GetMeALatteLike\Service\User as UserService;
+use GetMeALatteLike\Service\UserSession as UserSessionService;
+use GetMeALatteLike\Service\UserValidation;
+use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
+use Symfony\Component\Mailer\Mailer;
+use Symfony\Component\Mailer\Transport\SendmailTransport;
+use Symfony\Component\Mime\Address;
+use Symfony\Component\Mime\Email as EmailMessage;
 
 class Account
 {

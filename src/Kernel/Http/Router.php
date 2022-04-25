@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace BuyMeACoffeeClone\Kernel\Http;
+namespace GetMeALatteLike\Kernel\Http;
 
-use BuyMeACoffeeClone\Controller\Base;
+use GetMeALatteLike\Controller\Base;
 use InvalidArgumentException;
 use ReflectionClass;
 use ReflectionException;
@@ -12,7 +12,7 @@ use ReflectionMethod;
 
 class Router
 {
-    private const CONTROLLER_NAMESPACE = 'BuyMeACoffeeClone\Controller\\';
+    private const CONTROLLER_NAMESPACE = 'GetMeALatteLike\Controller\\';
     private const CONTROLLER_SEPARATOR = '@';
 
     public const METHOD_GET = 'GET';

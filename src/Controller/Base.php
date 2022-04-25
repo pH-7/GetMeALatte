@@ -1,10 +1,10 @@
 <?php
 
-namespace BuyMeACoffeeClone\Controller;
+namespace GetMeALatteLike\Controller;
 
-use BuyMeACoffeeClone\Kernel\PhpTemplate\View;
-use BuyMeACoffeeClone\Kernel\Session;
-use BuyMeACoffeeClone\Service\UserSession as UserSessionService;
+use GetMeALatteLike\Kernel\PhpTemplate\View;
+use GetMeALatteLike\Kernel\Session;
+use GetMeALatteLike\Service\UserSession as UserSessionService;
 
 class Base
 {

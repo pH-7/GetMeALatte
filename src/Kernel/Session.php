@@ -1,6 +1,6 @@
 <?php
 
-namespace BuyMeACoffeeClone\Kernel;
+namespace GetMeALatteLike\Kernel;
 
 class Session
 {

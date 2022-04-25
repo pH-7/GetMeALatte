@@ -1,4 +1,4 @@
-<?php use BuyMeACoffeeClone\Kernel\Http\Router; ?>
+<?php use GetMeALatteLike\Kernel\Http\Router; ?>
 
 <nav class="light-blue lighten-1" role="navigation">
     <div class="nav-wrapper container">

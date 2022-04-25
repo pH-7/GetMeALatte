@@ -1,8 +1,8 @@
 <?php
 
-namespace BuyMeACoffeeClone\Service;
+namespace GetMeALatteLike\Service;
 
-use BuyMeACoffeeClone\Kernel\Session;
+use GetMeALatteLike\Kernel\Session;
 
 class UserSession
 {

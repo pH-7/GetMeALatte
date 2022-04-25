@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace BuyMeACoffeeClone\Model;
+namespace GetMeALatteLike\Model;
 
-use BuyMeACoffeeClone\Kernel\Database\Database;
+use GetMeALatteLike\Kernel\Database\Database;
 
 class Payment
 {

@@ -6,6 +6,11 @@
             "email": "pierre@pierrehenry.be"
         }
     ],
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
     "require": {
         "php": ">= 8.0",
         "symfony/dotenv": "^6.0",
@@ -15,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "BuyMeACoffeeClone\\": "src"
+            "GetMeALatteLike\\": "src"
         },
         "files": ["src/helpers.php"]
     },

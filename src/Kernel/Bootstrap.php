@@ -1,8 +1,8 @@
 <?php
 
-namespace BuyMeACoffeeClone\Kernel;
+namespace GetMeALatteLike\Kernel;
 
-use BuyMeACoffeeClone\Kernel\Database\Database;
+use GetMeALatteLike\Kernel\Database\Database;
 use Symfony\Component\Dotenv\Dotenv;
 
 final class Bootstrap 
