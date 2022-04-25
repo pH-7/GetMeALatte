@@ -36,9 +36,7 @@
             "cp -Rf vendor/ph-7/materialize-css/dist/* assets/materialize"
         ],
         "post-install-cmd": ["@post-cmd"],
-        "post-update-cmd": ["@post-cmd"]
-    },
-    "scripts": {
+        "post-update-cmd": ["@post-cmd"],
         "test": "vendor/bin/phpunit"
     }
 }
