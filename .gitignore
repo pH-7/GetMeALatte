@@ -2,6 +2,7 @@
 /vendor
 
 # Tests
+/coverage
 phpunit.xml
 .phpunit.result.cache
 
