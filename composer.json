@@ -6,7 +6,7 @@
     "authors": [
         {
             "name": "Pierre-Henry Soria",
-            "email": "pierre@pierrehenry.be"
+            "email": "hi@ph7.me"
         }
     ],
     "config": {
@@ -21,6 +21,9 @@
         "ph-7/materialize-css": "^1.0",
         "symfony/templating": "^6.0"
     },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
     "autoload": {
         "psr-4": {
             "GetMeALatteLike\\": "src"
@@ -33,5 +36,8 @@
         ],
         "post-install-cmd": ["@post-cmd"],
         "post-update-cmd": ["@post-cmd"]
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
     }
 }

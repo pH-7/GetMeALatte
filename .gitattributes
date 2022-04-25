@@ -1,6 +1,7 @@
 #  Dev files to be excluded for package distribution
 /tests            export-ignore
-database..sql     export-ignore
+.git              export-ignore
+database.sql      export-ignore
 .gitignore        export-ignore
 .gitattributes    export-ignore
 phpunit.xml.dist  export-ignore
