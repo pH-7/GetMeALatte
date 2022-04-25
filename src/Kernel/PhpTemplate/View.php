@@ -1,4 +1,8 @@
 <?php
+/**
+ * @author    Pierre-Henry Soria <hi@ph7.me>
+ * @license   MIT License; <https://opensource.org/licenses/MIT>
+ */
 
 declare(strict_types=1);
 
@@ -38,4 +42,3 @@ final class View
         echo self::render($viewFile, $title, $context);
     }
 }
-

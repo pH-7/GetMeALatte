@@ -1,4 +1,8 @@
 <?php
+/**
+ * @author    Pierre-Henry Soria <hi@ph7.me>
+ * @license   MIT License; <https://opensource.org/licenses/MIT>
+ */
 
 declare(strict_types=1);
 
@@ -47,7 +51,7 @@ class Item
 
     public function get(string $value)
     {
-        $sql = 'SELECT * FROM ' . self::TABLE_NAME . ' AS i INNER JOIN ' . Payment::TABLE_NAME . ' AS p USING(userId) WHERE idName = :value OR i.userId = :value LIMIT 1';
+        $sql = 'SELECT * FROM ' . self::TABLE_NAME . ' AS i INNER JOIN ' . Payment::TABLE_NAME . ' AS p INNER JOIN ' . User::TABLE_NAME . ' AS u USING(userId) WHERE idName = :value OR i.userId = :value LIMIT 1';
 
         Database::query($sql, ['value' => $value]);
 

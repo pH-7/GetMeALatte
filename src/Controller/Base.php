@@ -1,4 +1,10 @@
 <?php
+/**
+ * @author    Pierre-Henry Soria <hi@ph7.me>
+ * @license   MIT License; <https://opensource.org/licenses/MIT>
+ */
+
+declare(strict_types=1);
 
 namespace GetMeALatteLike\Controller;
 

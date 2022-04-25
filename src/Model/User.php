@@ -1,4 +1,8 @@
 <?php
+/**
+ * @author    Pierre-Henry Soria <hi@ph7.me>
+ * @license   MIT License; <https://opensource.org/licenses/MIT>
+ */
 
 declare(strict_types=1);
 
@@ -8,7 +12,7 @@ use GetMeALatteLike\Kernel\Database\Database;
 
 class User
 {
-    private const TABLE_NAME = 'users';
+    public const TABLE_NAME = 'users';
 
     public function insert(array $userDetails): string|bool
     {
