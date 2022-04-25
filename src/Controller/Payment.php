@@ -133,7 +133,7 @@ class Payment extends Base
         $viewVariables['summary'] = '';
         $viewVariables['price'] = '';
         $viewVariables['shareItemUrl'] = '';
-        if ($doesItemExist && $itemDetails = $this->itemService->getFromUserId($userId)) {
+        if ($itemDetails = $this->itemService->getFromUserId($userId)) {
             $viewVariables['idName'] = $itemDetails->idName;
             $viewVariables['itemName'] = $itemDetails->itemName;
             $viewVariables['businessName'] = $itemDetails->businessName;
