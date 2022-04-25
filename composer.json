@@ -1,5 +1,8 @@
 {
     "name": "pierrehenry/buy-me-acoffee-clone",
+    "type": "project",
+    "license": "MIT",
+    "homepage": "https://pierrehenry.be",
     "authors": [
         {
             "name": "Pierre-Henry Soria",
