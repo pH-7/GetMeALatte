@@ -46,7 +46,7 @@ class Payment extends Base
 
             if (isset($paypalEmail, $currency)) {
                 if (!$this->userValidation->isEmailValid($paypalEmail)) {
-                    $viewVariables[View::ERROR_MESSAGE_KEY] = 'Paypal email not valid';
+                    $viewVariables[View::ERROR_MESSAGE_KEY] = 'PayPal email not valid';
                 } elseif ($doesUserPaymentExist) {
                     // Update Payment Details
                     $this->paymentService->update($userId, $paypalEmail, $currency);
@@ -60,7 +60,8 @@ class Payment extends Base
                             'currency' => $currency,
                         ]
                     );
-                    $viewVariables[View::SUCCESS_MESSAGE_KEY] = 'Payment successfully added';
+                    $successMessage = sprintf('Payment successfully added. <br> You can now <a href="%s">add an item</a> 🥳', site_url('/item'));
+                    $viewVariables[View::SUCCESS_MESSAGE_KEY] = $successMessage;
                 }
             } else {
                 $viewVariables[View::ERROR_MESSAGE_KEY] = 'All fields are required.';
