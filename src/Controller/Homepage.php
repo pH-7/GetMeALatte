@@ -2,23 +2,21 @@
 
 declare(strict_types=1);
 
-namespace BuyMeACoffeeClone\Controller;
+namespace GetMeALatteLike\Controller;
 
-use BuyMeACoffeeClone\Kernel\Input;
-use BuyMeACoffeeClone\Kernel\PhpTemplate\View;
-use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
-use Symfony\Component\Mailer\Mailer;
-use Symfony\Component\Mailer\Transport\SendmailTransport;
-use Symfony\Component\Mime\Address;
-use Symfony\Component\Mime\Email as EmailMessage;
+use GetMeALatteLike\Kernel\Input;
+use GetMeALatteLike\Kernel\PhpTemplate\View;
+use GetMeALatteLike\Service\Contact as ContactService;
 
 class Homepage extends Base
 {
+    private ContactService $contactService;
+
     public function __construct()
     {
         parent::__construct();
 
-        $this->isLoggedIn = $this->userSessionService->isLoggedIn();
+        $this->contactService = new ContactService();
     }
 
     public function index(): void
@@ -53,26 +51,19 @@ class Homepage extends Base
             $name = Input::post('name');
             $email = Input::post('email');
             $message = Input::post('message');
+            $phoneNumber = Input::post('phone_number');
 
             if (isset($name, $email, $message)) {
-                try {
-                    $transport = new SendmailTransport();
-                    $mailer = new Mailer($transport);
+                $isSuccess = $this->contactService->sendEmailToSiteOwner([
+                    'name' => $name,
+                    'email' => $email,
+                    'message' => $message,
+                    'phoneNumber' => $phoneNumber
+                ]);
 
-                    $emailMessage = new EmailMessage();
-                    $emailMessage->from(new Address(escape($email), escape($name)));
-                    $emailMessage->to(new Address($_ENV['ADMIN_EMAIL'], $_ENV['SITE_NAME']));
-                    $emailMessage->subject('Contact Form');
-                    $emailMessage->priority(EmailMessage::PRIORITY_NORMAL);
-                    $emailMessage->text(escape($message));
-
-                    $mailer->send($emailMessage);
-
+                if ($isSuccess) {
                     $viewVariables[View::SUCCESS_MESSAGE_KEY] = 'Your message has been sent. We will get back to you.';
-                } catch (TransportExceptionInterface $error) {
-                    // TODO Improvement: Use Monolog would be nice :)
-                    error_log($error->getMessage());
-
+                } else {
                     $viewVariables[View::ERROR_MESSAGE_KEY] = 'An error has occurred while trying to reach us. Please send your message again later.';
                 }
             } else {
