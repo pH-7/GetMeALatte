@@ -1,3 +1,3 @@
-# BuyMeACoffeeClone
+# GetMeALatte
 
 Full PHP Project - BuyMeACoffeeClone
