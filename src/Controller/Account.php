@@ -60,6 +60,13 @@ class Account
                         if ($userId = $this->userService->create($user)) {
                             $this->userSessionService->setAuthentication($userId, $email, $fullName);
 
+                            try {
+                                $this->sendGreetingEmail($user);
+                            } catch (TransportExceptionInterface $error) {
+                                // TODO We could use Monolog package for this :)
+                                error_log($error->getMessage());
+                            }
+
                             redirect();
                         } else {
                             $viewVariables[View::ERROR_MESSAGE_KEY] = 'An error while creating your account has occurred. Please try again.';
@@ -184,5 +191,48 @@ class Account
 
         // Redirect the user to the index page
         redirect();
+    }
+
+    /**
+     * @throws \Symfony\Component\Mailer\Exception\TransportExceptionInterface
+     */
+    private function sendGreetingEmail(array $userDetails): void
+    {
+        $userName = escape($userDetails['fullname']);
+        $userEmail = $userDetails['email'];
+        $siteName = $_ENV['SITE_NAME'];
+        $siteUrl = $_ENV['SITE_URL'];
+
+        $htmlMessage = <<<HTML
+<html>
+<body>
+<p>Hello $userName.</p>
+<p>Your account has been successfully created.</p>
+<p>Welcome to <a href="$siteUrl">$siteName</a></p>
+</body>
+</html>
+HTML;
+
+        $textMessage = <<<TEXT
+Hello $userName
+
+Your account has been successfully created.
+
+Welcome to $siteName ($siteUrl).
+TEXT;
+
+        $transport = new SendmailTransport();
+        $mailer = new Mailer($transport);
+
+        $emailMessage = new EmailMessage();
+
+        $emailMessage->from(new Address($_ENV['ADMIN_EMAIL'], $_ENV['SITE_NAME']));
+        $emailMessage->to(new Address($userEmail, $userName));
+        $emailMessage->subject('Your account has been created 🎉');
+        $emailMessage->priority(EmailMessage::PRIORITY_HIGHEST);
+        $emailMessage->html($htmlMessage);
+        $emailMessage->text($textMessage);
+
+        $mailer->send($emailMessage);
     }
 }
