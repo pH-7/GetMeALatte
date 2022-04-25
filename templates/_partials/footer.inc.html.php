@@ -41,8 +41,13 @@
    <script src="<?= site_url('/assets/materialize/js/materialize.js') ?>"></script>
    <script>
        document.addEventListener('DOMContentLoaded', function() {
-           const elements = document.querySelectorAll('select');
-           M.FormSelect.init(elements);
+           // Form Selects
+           const selectElements = document.querySelectorAll('select');
+           M.FormSelect.init(selectElements);
+
+           // Image Sliders
+           const sliderElement = document.querySelectorAll('.slider');
+           M.Slider.init(sliderElement);
        });
    </script>
 </body>

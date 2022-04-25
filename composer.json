@@ -16,9 +16,10 @@
     },
     "require": {
         "php": ">= 8.0",
+        "ph-7/materialize-css": "^1.0",
+        "ph-7/ph2gravatar": "^2.0",
         "symfony/dotenv": "^6.0",
         "symfony/mailer": "^6.0",
-        "ph-7/materialize-css": "^1.0",
         "symfony/templating": "^6.0"
     },
     "require-dev": {

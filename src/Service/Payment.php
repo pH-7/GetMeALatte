@@ -49,6 +49,8 @@ class Payment
             'business' => $itemData->paypalEmail,
             'itemName' => $itemData->itemName,
             'amount' => $itemData->price,
+            'userName' => $itemData->fullname,
+            'userEmail' => $itemData->email,
             'currency_code' => $itemData->currency
         ];
 
