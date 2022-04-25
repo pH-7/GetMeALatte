@@ -7,7 +7,7 @@
 
     <section>
         <p><?= nl2br($view->escape($summary)) ?></p>
-        <p>Price: <?= $view->escape($price) ?></p>
+        <p>Price: <em><?= $view->escape($currency) ?> <?= $view->escape($price) ?></em></p>
         <?php if (!empty($businessName)): ?>
             <p><small><?= $view->escape($businessName) ?></small></p>
         <?php endif ?>
