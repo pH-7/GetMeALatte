@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace GetMeALatteLike\Tests\Kernel;
+namespace GetMeALatteLike\Tests\Unit\Kernel;
 
 use GetMeALatteLike\Kernel\Input;
 use PHPUnit\Framework\TestCase;
