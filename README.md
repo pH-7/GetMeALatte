@@ -2,6 +2,7 @@
 
 Full PHP Project - BuyMeACoffeeClone
 
+Lightweight item's crowdfunding Web application.
 
 ## Setting Up
 
