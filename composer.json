@@ -1,5 +1,6 @@
 {
     "name": "pierrehenry/buy-me-acoffee-clone",
+    "description": "Lightweight item promotion crowdfunding Web application.",
     "type": "project",
     "license": "MIT",
     "homepage": "https://pierrehenry.be",
