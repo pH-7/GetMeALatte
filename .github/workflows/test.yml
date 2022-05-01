@@ -4,12 +4,12 @@ on: [ push, pull_request ]
 
 jobs:
   run:
-    runs-on: ${{ matrix.operating-system }}
+    runs-on: ${{ matrix.os}}
     strategy:
       matrix:
-        operating-system: [ 'ubuntu-latest', 'windows-2022' ]
+        os: [ 'ubuntu-latest', 'windows-2022' ]
         php-versions: [ '8.0', '8.1' ]
-    name: PHP ${{ matrix.php-versions }} Test on ${{ matrix.operating-system }}
+    name: PHP ${{ matrix.php-versions }} Test on ${{ matrix.os }}
 
     steps:
       - name: Checkout
