@@ -23,8 +23,6 @@ final class InputTest extends TestCase
 
     public function testGetWithoutExistingKey(): void
     {
-        unset($_GET['key']);
-
         $actual = Input::get('key');
         $this->assertSame('', $actual);
     }
@@ -39,8 +37,6 @@ final class InputTest extends TestCase
 
     public function testGetNotExists(): void
     {
-        unset($_GET['exist']);
-
         $actual = Input::getExists('exist');
         $this->assertFalse($actual);
     }
@@ -55,8 +51,6 @@ final class InputTest extends TestCase
 
     public function testPostWithoutExistingKey(): void
     {
-        unset($_POST['key']);
-
         $actual = Input::post('key');
         $this->assertSame('', $actual);
     }
@@ -71,15 +65,15 @@ final class InputTest extends TestCase
 
     public function testPostNotExists(): void
     {
-        unset($_POST['exist']);
-
         $actual = Input::postExists('exist');
         $this->assertFalse($actual);
     }
 
     protected function tearDown(): void
     {
-        //$this->cleanupGlobalVariables();
+        parent::tearDown();
+
+        $this->cleanupGlobalVariables();
     }
 
     private function cleanupGlobalVariables(): void
