@@ -50,17 +50,15 @@ final class SessionTest extends TestCase
         $this->assertSame('value2', $this->session->get('name2'));
     }
 
-    public function testDoesExist(): void
+    public function testDoesKeyExist(): void
     {
         $_SESSION['key'] = 1;
 
         $this->assertTrue($this->session->doesExist('key'));
     }
 
-    public function testDoesNotExist(): void
+    public function testDoesKeyNotExist(): void
     {
-        unset($_SESSION['key']);
-
         $this->assertFalse($this->session->doesExist('key'));
     }
 
