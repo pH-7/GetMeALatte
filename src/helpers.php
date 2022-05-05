@@ -32,9 +32,11 @@ function redirect(string $value = null, $permanent = true): void {
 
     header('Location: ' . $url);
     
-    // Here (below), we exit the script as after a redirection (HTTP Location header), 
-    // it's pointless to continue the script running as the redirection will happen no matter what. 
-    // That way, we don't waste time continuing running code after sending the "HTTP Location header"
+    /**
+     * Here (below), we exit the script as after a redirection (HTTP Location header), 
+     * it's pointless to continue the script running as the redirection will happen no matter what. 
+     * That way, we don't waste time continuing running code after sending the "HTTP Location header"
+     */
     exit;
 }
 
