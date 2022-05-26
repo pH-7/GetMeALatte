@@ -1,8 +1,9 @@
 # GetMeALatte ☕️
 
-Full PHP Project - BuyMeACoffeeClone
+Full PHP Project - GetMeALatteLike (formerly BuyMeACoffeeClone).
 
 Lightweight user item promototion - crowdfunding Web application.
+
 
 ## Setting Up
 
@@ -23,3 +24,8 @@ I'm [Pierre-Henry Soria](https://ph7.me). A **super passionate** Belgian **softw
 ## License
 
 Under [MIT](https://opensource.org/licenses/MIT) 🎉
+
+
+## Context
+
+This is the final and completed project of my [Udemy Course](https://www.udemy.com/course/create-real-world-php-webapp-from-scratch/).
