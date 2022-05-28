@@ -28,4 +28,4 @@ Under [MIT](https://opensource.org/licenses/MIT) 🎉
 
 ## Context
 
-This is the final and completed project of my [Udemy Course](https://www.udemy.com/course/create-real-world-php-webapp-from-scratch/).
+This is the final and completed project of my [Udemy Course](https://www.udemy.com/course/create-real-world-php-webapp-from-scratch/), **Build a Real-World User Web Application from scratch with PHP 8.1+**.
