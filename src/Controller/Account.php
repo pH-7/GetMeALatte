@@ -23,15 +23,15 @@ use Symfony\Component\Mime\Email as EmailMessage;
 class Account
 {
     private UserService $userService;
-    private UserValidation $userValidation;
     private UserSessionService $userSessionService;
+    private UserValidation $userValidation;
     private bool $isLoggedIn;
 
     public function __construct()
     {
         $this->userService = new UserService();
-        $this->userValidation = new UserValidation();
         $this->userSessionService = new UserSessionService(new Session());
+        $this->userValidation = new UserValidation();
         $this->isLoggedIn = $this->userSessionService->isLoggedIn();
     }
 
