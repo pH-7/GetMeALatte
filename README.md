@@ -1,6 +1,6 @@
 # GetMeALatte ☕️
 
-Full PHP Project - GetMeALatteLike (formerly BuyMeACoffeeClone).
+Full PHP Project "GetMeALatteLike" (project formerly called BuyMeACoffeeClone).
 
 Lightweight user item promototion - crowdfunding Web application.
 
@@ -12,7 +12,7 @@ Lightweight user item promototion - crowdfunding Web application.
 3. Run `composer install` from a command line (terminal) to install the project dependencies.
 
 
-## The Author
+## Author
 
 I'm [Pierre-Henry Soria](https://ph7.me). A **super passionate** Belgian **software engineer** 🤗 And a true cheese 🧀 & chocolate 🍫 lover! 😋 You can reach me at *hi {[AT]} ph7 [{D0T}] me*
 
