@@ -23,7 +23,7 @@ I'm [Pierre-Henry Soria](https://ph7.me). A **super passionate** Belgian **softw
 
 ## Context
 
-This is the final and completed project of my [Udemy Course](https://www.udemy.com/course/create-real-world-php-webapp-from-scratch/), **Build a Real-World User Web Application from scratch with PHP 8.1+**.
+This is the source code of the final and completed project of my [Udemy Course](https://www.udemy.com/course/create-real-world-php-webapp-from-scratch/), **Build a Real-World User Web Application from scratch with PHP 8.1+**.
 
 
 ## License
